@@ -12,7 +12,6 @@ Baseado no repositório original: https://github.com/adidas/adidas-devops-maturi
 
 #### DESENVOLVIMENTO
 
-----------
 CAPACIDADE | ENGATINHAR | CAMINHAR | CORRER
 ---------- | ---------- | -------- | ------
 Usar controle de versão para todos os artefatos de produção | Sem controle de versão | Código fonte ou outros ativos sob controle de versão | Código fonte ou outros ativos sob controle de versão e todos os artefatos de produção com versão e armazenados no repositório de artefatos correspondente
