@@ -1,77 +1,69 @@
+# Framework de Maturidade DevOps
+
 Baseado no repositório original: https://github.com/adidas/adidas-devops-maturity-framework/blob/master/framework/devops_maturity_framework.md
 
-# How to use the framework?
+## Como usar este framework?
 
-1. The first step will be to do a self-assessment of the current status of your Product Team for each
-one of the identified capabilities.
+1. O primeiro passo será fazer uma auto-avaliação do status atual de sua Equipe para cada uma das capacidades identificadas.
 
-1. Define the desired end-point at the end of the next improvement cycle, a cycle can be a month,
-a quarter, a semester ... every team can define their improvement cycles although a good start would
-be to set quarterly targets to be able to define meaningful actions.
+2. Definir o ponto final desejado no final do próximo ciclo de melhoria, um ciclo pode ser um mês, um trimestre, um semestre ... cada equipe pode definir seus ciclos de melhoria, embora um bom começo seria estabelecer metas trimestrais para poder definir ações significativas.
 
-1. Identify the actions you will need to achieve the desired end-point.
+3. Identificar as ações necessárias para atingir o ponto final desejado.
 
-#### DEVELOPMENT
+#### DESENVOLVIMENTO
 
 ----------
-CAPABILITY | CRAWL | WALK | RUN
----------- | ----- | ---- | ---
-Use version control for all production artifacts | No version control | Source code or other assets under version control | Source code or other assets under version control and all production artifacts versioned and stored in the corresponding artifact repository
-Automate deployment processes | Manual deployment process | Partially automated deployment process | Fully automated deployment process
-Implement test automation | Manual test script execution | Partially automated testing (unit or regression or performance tests) | Fully automated testing (unit and reliability (regression and performance tests)
-Implement infrastructure automation | Manual deployment process | Partially automated deployment process. Provisioning is done by the teams | Fully automated deployment (infrastructure-as-code). Platform Engineering provides base images
-Support test data management | No test data management | Partially automated test data management (e.g. manually triggered import and export of test data) | Fully automated test data management incl. strategy (e.g. consumer data only in PROD)
-Implement continuous delivery | No continuous delivery | Partially automated delivery pipeline (e.g. automated build, test process with the manual deployment) | Fully automated pipeline (automated build, test, deployment across environments)
-Include NFR’s in Definition of Done | No NFR's used | Ad-hoc NFR checks | Standardised NFR checklist as acceptance criteria for successful releases
-Shift left on security | No security aspects considered during development cycle | Security aspects considered during development cycle but shifted towards release (not a priority) | Security aspects included during development cycle from the very start
-Build for resilience | No resilience build into system | Design infrastructure and code for failure | Design infrastructure and code for failure with fully automated error recovery (self-healing)
-Enable team for troubleshooting | No control over development lifecycle (e.g. access to PROD) | Team has full control over development lifecycle (e.g. access to PROD), but no access to logs and tools relevant for troubleshooting | Team has full control over development lifecycle (e.g. access to PROD) and full access to logs and tools for troubleshooting
-Feature handling | No feature branches for controlled releases | Feature branches are implemented for controlled  releases of distinct features | Feature branching and toggles are implemented to facilitate development, roll-out and roll-back (if needed) of usable features to production
-Releases | Releases to all users and all sites / geographies in one go | Releases to subset of users or  sites or geographies | Gradual releases to subset of users in specific sites / geographies thereby limiting the blash raduis for potential issues
+CAPACIDADE | ENGATINHAR | CAMINHAR | CORRER
+---------- | ---------- | -------- | ------
+Usar controle de versão para todos os artefatos de produção | Sem controle de versão | Código fonte ou outros ativos sob controle de versão | Código fonte ou outros ativos sob controle de versão e todos os artefatos de produção com versão e armazenados no repositório de artefatos correspondente
+Automatizar processos de implantação | Processo de implantação manual | Processo de implantação parcialmente automatizado | Processo de implantação totalmente automatizado
+Implementar automação de testes | Execução manual de scripts de testes | Testes parcialmente automatizados (testes unitários ou de regressão ou de desempenho) | Testes totalmente automatizados (testes unitários e de confiabilidade (testes de regressão e de desempenho)
+Implementar automação de infra-estrutura | Processo de implantação manual | Processo de implantação parcialmente automatizado. O provisionamento é feito pelas equipes | Desdobramento totalmente automatizado (infra-estrutura-como-código). A engenharia da plataforma fornece imagens de base
+Suporte ao gerenciamento de dados de teste | Sem gerenciamento de dados de teste | Gerenciamento de dados de teste parcialmente automatizado (por exemplo, importação e exportação de dados de teste acionados manualmente) | Gerenciamento de dados de teste totalmente automatizado, incluindo estratégia (por exemplo, dados do consumidor somente em PROD)
+Implementar entrega contínua | Sem entrega contínua | Duto de entrega parcialmente automatizado (por exemplo, construção automatizada, processo de teste com a distribuição manual) | Duto totalmente automatizado (construção automatizada, teste, distribuição através de ambientes)
+Incluir NFR's na Definição de Feito | Nenhuma NFR utilizada | Verificações NFR ad-hoc | Lista de verificação NFR padronizada como critério de aceitação para lançamentos bem sucedidos
+| Nenhum aspecto de segurança considerado durante o ciclo de desenvolvimento | Aspectos de segurança considerados durante o ciclo de desenvolvimento, mas mudados para a liberação (não uma prioridade) | Aspectos de segurança incluídos durante o ciclo de desenvolvimento desde o início
+Construir para resiliência | Nenhuma resiliência embutida no sistema | Projetar infra-estrutura e código para falha | Projetar infra-estrutura e código para falha com recuperação de erro totalmente automatizada (auto-cura)
+Habilitar a equipe para solucionar problemas | Sem controle sobre o ciclo de vida do desenvolvimento (por exemplo, acesso ao PROD) | A equipe tem controle total sobre o ciclo de vida do desenvolvimento (por exemplo, acesso ao PROD), mas nenhum acesso aos logs e ferramentas relevantes para solucionar problemas | A equipe tem controle total sobre o ciclo de vida do desenvolvimento (por exemplo, acesso ao PROD) e acesso total aos logs e ferramentas para solucionar problemas
+Manuseio de recursos | Nenhuma ramificação de recursos para lançamentos controlados | Ramos de recursos são implementados para lançamentos controlados de recursos distintos | Ramos de recursos e alternadores são implementados para facilitar o desenvolvimento, implantação e retorno (se necessário) de recursos utilizáveis para a produção
+Lançamentos | Lançamentos para todos os usuários e todos os sites / geografias de uma só vez | Lançamentos para subconjuntos de usuários ou sites ou geografias | Lançamentos graduais para subconjuntos de usuários em sites / geografias específicos, limitando assim os raduis de blash para problemas potenciais
 
-#### PRODUCT & PROCESSES
 
-----------
+#### PRODUTO & PROCESSOS
 
-CAPABILITY | CRAWL | WALK | RUN
----------- | ----- | ---- | ---
-Gather and implement customer feedback | No customer (internal or external) feedback gathered in development cycles | Customer feedback (internal or external) gathered on an ad-hoc basis | Customer feedback (internal or external) gathered after all releases
-Work in small batches and deploy more frequently | Big work batch size and releases on a monthly basis or longer | Work batch size optimized for weekly releases, but deployment frequency not in sync with business requirements (e.g lead time) | Work batch size optimized for frequent releases and deployment frequency in sync with business requirements (e.g. lead time)
-Have a lightweight change approval process | Change approval needed from multiple parties outside the team | Change approval needed within the team | 	No change approval needed or change approval process totally automated
-Integrate application data into Big Data Platform | No application data transferred at all | Partial business-relevant application data transferred to Big Data Platform or provided via API | All business-relevant application data transferred to Big Data Platform
-SRE role and activities | No clear SRE role and responsibility from Product team perspective | SRE tasks are defined and agreed from Execution (Operations, Automation, Hotfix) perspective | SRE tasks are defined for  Execution and Governance areas and agreed with all stakeholders (Business, Development)
-Postmortems | No causal analysis done for all outages | All outage RCA conducted and tied to change / release | Blameless Postmortems are conducted for all outages
-Resiliency / Chaos Engineering | No resiliency tests are conducted | Define environment dependencies (failure points) and execute resiliency tests to ensure no customer impact | Regular chaos (resiliency) exercise scheduled basis stead state / functionality change
+CAPACIDADE | ENGATINHAR | CAMINHAR | CORRER
+---------- | ---------- | -------- | ------
+Reunir e implementar feedback do cliente | Nenhum feedback do cliente (interno ou externo) coletado em ciclos de desenvolvimento | Feedback do cliente (interno ou externo) coletado em base ad-hoc | Feedback do cliente (interno ou externo) coletado após todos os lançamentos
+Tamanho do lote de trabalho otimizado para lançamentos semanais, mas com frequência de lançamento não sincronizada com os requisitos comerciais (por exemplo, lead time) | Tamanho do lote de trabalho otimizado para lançamentos frequentes e frequência de lançamento sincronizada com os requisitos comerciais (por exemplo, lead time)
+Ter um processo leve de aprovação de mudanças | Aprovação de mudanças necessária de várias partes fora da equipe | Aprovação de mudanças necessária dentro da equipe | Não é necessária aprovação de mudanças ou processo de aprovação de mudanças totalmente automatizado
+Integrar dados de aplicação na Big Data Platform | Nenhum dado de aplicação transferido | Dados de aplicação parcialmente relevantes para os negócios transferidos para a Big Data Platform ou fornecidos via API | Todos os dados de aplicação relevantes para os negócios transferidos para a Big Data Platform
+O papel e as atividades da SRE | Nenhuma função e responsabilidade claras da SRE da perspectiva da equipe de Produto | As tarefas da SRE são definidas e acordadas da perspectiva da Execução (Operações, Automação, Hotfix) | As tarefas da SRE são definidas para as áreas de Execução e Governança e acordadas com todas as partes interessadas (Negócios, Desenvolvimento)
+Os correios | Nenhuma análise causal feita para todas as interrupções | Todas as interrupções RCA conduzidas e amarradas à mudança / liberação | Os correios sem culpa são conduzidos para todas as interrupções
+Engenharia de resiliência / caos | Não são realizados testes de resiliência | Definir dependências de ambiente (pontos de falha) e executar testes de resiliência para garantir que não haja impacto no cliente | Exercício regular de caos (resiliência) com base programada de estado constante / mudança de funcionalidade
 
-#### MANAGEMENT & MONITORING
+#### GESTÃO E MONITORAMENTO
 
-----------
+CAPACIDADE | ENGATINHAR | CAMINHAR | CORRER
+---------- | ---------- | -------- | ------
+Monitorar o desempenho da aplicação e da infra-estrutura | Sem monitoramento no local | Monitoramento da aplicação ou do desempenho da infra-estrutura, mas sem alerta no local | Monitoramento da aplicação e do desempenho da infra-estrutura; alerta no local para os KPI's relevantes
+Monitorar o desempenho da entrega do software | Nenhuma métrica monitorada | Métricas selecionadas monitoradas | Todas as métricas chave monitoradas
+Trabalho Limite em andamento | Mais de 10 características em andamento | Menos de 10 características em andamento | Não mais de 5 características em andamento
+A governança da liberação | As mudanças de produto roladas para a produção não são reguladas para estabilidade e confiabilidade | As mudanças de produção são bases reguladas de estabilidade e confiabilidade em ambientes de teste | O consumo de orçamento de erros regula futuras liberações para um produto e atua como porta para mudanças na produção
+Monitoramento de Resiliência | Não são definidos KPI's para MTTx conforme diretrizes ITIL | Infra e KPI's de Monitoramento são definidos conforme diretrizes ITIL para MTTx, disponibilidade, rendimento, reportados e desvios rastreados até o fechamento | Sinais chave de monitoramento de SLI, SLO (latência, rendimento, taxa de erro, saturação) são capturados, reportados e vinculados ao fluxo do produto do ponto de vista comercial
 
-CAPABILITY | CRAWL | WALK | RUN
----------- | ----- | ---- | ---
-Monitor application and infrastructure performance | No monitoring in place | Application or infrastructure performance monitored but no alerting in place | Application and infrastructure performance is monitored; alerting in place for relevant KPI's
-Monitor software delivery performance | No metrics monitored | Selected metrics monitored | All key metrics monitored
-Limit Work in Progress | More than 10 features in progress | Less than 10 features in progress | Not more than 5 features in progress
-Release governance | Product changes rolled out to production are not regulated for stability and reliability | Production changes are regulated basis stability and reliability benchmarks in test environments | Error Budget consumption regulates future releases to a product and act as gate to production changes
-Resilience Monitoring | No KPI's defined for MTTx as per ITIL guidelines | Infra and Monitoring KPI's are defined as per ITIL guidelines for MTTx, availability, throughput, reported and deviations tracked to closure | Key monitoring signals form SLI, SLO (latency, throughput, error rate, saturation) are captured, reported and tied to product flow from business perspective
+#### CULTURA
 
-#### CULTURE
+CAPACIDADE | ENGATINHAR | CAMINHAR | CORRER
+---------- | ---------- | -------- | ------
+Construí-lo e executá-lo | Equipes de produtos constroem o sistema, as operações o executam (e consertam). Sem fim de propriedade para o ciclo de vida do produto. Dev e Ops com equipes separadas | Propriedade total para que as equipes de produto construam e operem o sistema apoiado pelo SRE. Não é necessário suporte L2 | Propriedade total para que as equipes de produto construam e operem o sistema. Perfis de engenharia em forma de T dentro das equipes de produto para operar em modo DevOps completo com SRE habilitado nas equipes de produto
+Fomentar e permitir a experimentação de equipes ligada ao valor do negócio | Sem tempo ou recursos dedicados a experimentações de equipes | Horários irregulares ou eventos bloqueados para experimentações de equipes (por exemplo, time hackathon) | Horários regulares ou eventos bloqueados para experimentações de equipes (por exemplo, team hackathon todos os meses ou trimestres)
+Apoiar e facilitar a colaboração entre as equipes | Nenhuma colaboração com outras equipes, embora necessária para o produto | Intercâmbio irregular entre os membros da equipe e ou outras equipes (por exemplo, CoP, reuniões, almoço, café, esportes) | Intercâmbio regular entre os membros da equipe e outras equipes (por exemplo, CoP, reuniões, almoço, café, esportes)
+Colaboração | Nenhuma colaboração com Operações em torno do projeto do produto do ponto de vista da estabilidade, confiabilidade | As equipes de produto recebem entradas de projeto (feedback) em torno da estabilidade, confiabilidade dos especialistas da SRE. Os especialistas da SRE estão envolvidos durante a fase de testes (no ciclo de desenvolvimento) ou pós-produção | Arquitetos de produto colaboram regularmente (desde o planejamento) com os especialistas da SRE para evoluir o projeto do produto do ponto de vista de desempenho, estabilidade, confiabilidade
 
-----------
+#### ARQUITETURA
 
-CAPABILITY | CRAWL | WALK | RUN
----------- | ----- | ---- | ---
-Build it and run it | Product teams build the system, operations run (and fix) it. No end to end ownership for product lifecycle. Dev and Ops staffed in separated teams | Full ownership for product teams to build and run the system supported by SRE. No L2 support needed | Full ownership for product teams to build and run the system. T-shape engineering profiles within the product teams to operate in full DevOps mode with enabled SRE in the product teams
-Foster and enable team experimentation linked to business value | No time or resources dedicated for teams experimentations | Irregular time slots or events blocked for team experimentations (e.g. team hackathon) | Regular time slots or events blocked for team experimentations (e.g. team hackathon every month or quarter)
-Support and facilitate collaboration among teams | No collaboration with other teams although necessary for the product | Irregular exchange between team members and or other teams (e.g. CoP, meetings, lunch, coffee, sports) | Regular exchange between among team members and other teams (e.g. CoP, meetings, lunch, coffee, sports)
-Collaboration | No collaboration with Operations around product design from stability, reliability perspective | Product teams take design inputs (feedback) around stability, reliability from SRE experts. SRE experts are involved during testing phase (in development cycle) or post issues in production | Product architects collaborate regularly (from planning) with SRE experts to evolve the design of the product from performance, stability, reliability
-
-#### ARCHITECTURE
-
-----------
-
-CAPABILITY | CRAWL | WALK | RUN
----------- | ----- | ---- | ---
-Use a loosely coupled architecture | Monolithic application with a high level of interdependencies | Re-architecture in progress moving from a monolithic solution to a microservice-based architecture| System has no or very few direct dependencies to other systems. And those dependencies are tied to open standards and not tied to technologies and frameworks (e.g. Java RPC)
-Focus on independent deployability and testability | Dependent deployability and testability across teams | Some components can be deployed and tested independently but parts of the components still have dependencies across teams| Teams can deploy and test their systems independently
-Use established Platform Engineering solutions as a default | Custom solutions used even though provided by Platform Engineering | All solution aligned with Platform Engineering, Solution and Domain Architecture, but exceptions were granted | All solutions aligned with Platform Engineering, Solution and Domain Architecture and no custom solutions used that are provided by Platform Engineering
+CAPACIDADE | ENGATINHAR | CAMINHAR | CORRER
+---------- | ---------- | -------- | ------
+Usar uma arquitetura pouco acoplada | Aplicação monolítica com um alto nível de interdependências | Rearquitetura em andamento passando de uma solução monolítica para uma arquitetura baseada em microserviços| Sistema não tem nenhuma ou muito poucas dependências diretas para outros sistemas. E essas dependências estão ligadas a padrões abertos e não ligadas a tecnologias e estruturas (por exemplo, Java RPC).
+Foco na capacidade de implementação e testabilidade independente | Capacidade de implementação e testabilidade dependente entre equipes | Alguns componentes podem ser implementados e testados independentemente, mas partes dos componentes ainda têm dependências entre equipes| As equipes podem implementar e testar seus sistemas independentemente
+Usar soluções de Engenharia de Plataforma estabelecidas como padrão | Soluções personalizadas usadas mesmo que fornecidas pela Engenharia de Plataforma | Todas as soluções alinhadas com a Engenharia de Plataforma, Solução e Arquitetura de Domínio, mas foram concedidas exceções | Todas as soluções alinhadas com a Engenharia de Plataforma, Solução e Arquitetura de Domínio e nenhuma solução personalizada usada que são fornecidas pela Engenharia de Plataforma

@@ -1,4 +1,4 @@
 # Gestão de Tecnologia
 
 * [Escala de Proficiência](./escala-proficiencia.md)
-* [Escala de Proficiência](./devops-maturity-framework.md)
+* [Framework de Maturidade DevOps](./devops-maturity-framework.md)
